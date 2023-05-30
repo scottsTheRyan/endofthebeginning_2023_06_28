@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import { ProductsProvider } from "./context/products_context";
-import { FilterProvider } from "./context/filter_context";
-import { CartProvider } from "./context/cart_context";
-import { UserProvider } from "./context/user_context";
-import { Auth0Provider } from "@auth0/auth0-react";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-=======
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -24,15 +11,12 @@ import { Auth0Provider } from '@auth0/auth0-react'
 
 
 
->>>>>>> parent of c3339d5 (oof dependencies)
 
 ReactDOM.render(
   <Auth0Provider
-    domain={process.env.REACT_APP_AUTH_DOMAIN}
-    clientId={process.env.REACT_APP_CLIENT_ID}
-    authorizationParams={{
-      redirect_uri: window.location.origin,
-    }}
+    domain="dev-5wn8iir8z5cg4swn.us.auth0.com"
+    clientId="ktV0IxdZR7LSkgRr2KXkSjpH4vilJOBr"
+    redirect_uri: {window.location.origin}
   >
     <UserProvider>
       <ProductsProvider>
@@ -43,12 +27,7 @@ ReactDOM.render(
         </FilterProvider>
       </ProductsProvider>
     </UserProvider>
-<<<<<<< HEAD
-  </Auth0Provider>
-);
-=======
   </Auth0Provider>,
 
   document.getElementById('root')
 )
->>>>>>> parent of c3339d5 (oof dependencies)
