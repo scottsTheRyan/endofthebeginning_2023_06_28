@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import { ProductsProvider } from './context/products_context'
@@ -10,7 +10,7 @@ import { Auth0Provider } from '@auth0/auth0-react'
 
 
 
-
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 ReactDOM.render(
   <Auth0Provider
@@ -27,7 +27,5 @@ ReactDOM.render(
         </FilterProvider>
       </ProductsProvider>
     </UserProvider>
-  </Auth0Provider>,
-
-  document.getElementById('root')
+  </Auth0Provider>
 )
